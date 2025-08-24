@@ -50,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4             &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp N0  &kp DELETE
-&kp LA(BACKSPACE)  &trans        &kp PLUS      &kp KP_MINUS  &kp ASTRK             &kp SLASH                &trans     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &kp BACKSPACE
-&kp TAB            &trans        &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-                                               &kp EQUAL     &trans                &kp SPACE                &kp RET    &trans           &kp RALT
+&bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4             &trans         &kp KP_NUMBER_7  &eightup         &kp KP_NUMBER_9  &kp N0  &kp DELETE
+&kp LA(BACKSPACE)  &trans        &kp PLUS      &kp KP_MINUS  &kp ASTRK             &kp SLASH                &trans         &fourleft        &fivedown        &sixright        &trans  &kp BACKSPACE
+&kp TAB            &trans        &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &kp RET
+                                               &kp LCMD      &trans                &kp SPACE                &kp RIGHT_ALT  &trans           &trans
             >;
         };
 
@@ -120,6 +120,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        eightup: eightup {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EIGHTUP";
+            bindings = <&kp KP_NUMBER_8>, <&kp UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RALT)>;
+        };
+
+        fivedown: fivedown {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FIVEDOWN";
+            bindings = <&kp KP_NUMBER_5>, <&kp DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RALT)>;
+        };
+
+        fourleft: fourleft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "FOURLEFT";
+            bindings = <&kp KP_NUMBER_4>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RALT)>;
+        };
+
+        sixright: sixright {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SIXRIGHT";
+            bindings = <&kp KP_NUMBER_6>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RALT)>;
         };
     };
 };
