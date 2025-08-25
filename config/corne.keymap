@@ -129,6 +129,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RALT)>;
         };
 
         fivedown: fivedown {
@@ -138,6 +139,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RALT)>;
         };
 
         fourleft: fourleft {
@@ -147,6 +149,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RALT)>;
         };
 
         sixright: sixright {
@@ -156,6 +159,7 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
+            keep-mods = <(MOD_LGUI|MOD_RALT)>;
         };
     };
 };
