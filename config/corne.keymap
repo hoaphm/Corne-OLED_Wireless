@@ -35,10 +35,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&gresc                          &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I        &odash       &pequal          &kp ESC
-&mt LS(LA(LC(LCMD))) BACKSPACE  &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
-&kp TAB                         &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
-                                                           &kp LALT     &lt 1 DEL     &kp SPACE    &kp SPACE  &lt 2 DEL     &kp RALT
+&gresc                     &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I        &odash       &pequal          &kp ESC
+&kp TAB                    &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
+&mt LS(LA(LC(LGUI))) CAPS  &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
+                                                      &kp LALT     &lt 1 DEL     &kp SPACE    &kp SPACE  &lt 2 DEL     &kp RALT
             >;
         };
 
@@ -50,10 +50,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4             &trans         &kp KP_NUMBER_7  &eightup      &kp KP_NUMBER_9  &kp N0        &kp DELETE
-&kp LA(BACKSPACE)  &trans        &kp PLUS      &kp KP_MINUS  &kp ASTRK             &kp SLASH                &trans         &fourleft        &fivedown     &sixright        &trans        &kp BACKSPACE
-&swapper           &trans        &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4  &kp RET
-                                               &kp LCMD      &trans                &kp SPACE                &kp RIGHT_ALT  &key_repeat      &trans
+&bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4             &trans         &kp N7        &eightup      &kp KP_NUMBER_9  &kp N0        &kp DELETE
+&kp LA(BACKSPACE)  &trans        &kp PLUS      &kp KP_MINUS  &kp ASTRK             &kp SLASH                &trans         &fourleft     &fivedown     &sixright        &trans        &kp BACKSPACE
+&swapper           &trans        &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4  &kp RET
+                                               &kp LCMD      &trans                &kp SPACE                &kp RIGHT_ALT  &key_repeat   &trans
             >;
         };
 
@@ -125,7 +125,7 @@
         eightup: eightup {
             compatible = "zmk,behavior-mod-morph";
             label = "EIGHTUP";
-            bindings = <&kp KP_NUMBER_8>, <&kp UP>;
+            bindings = <&kp N8>, <&kp UP>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
@@ -135,7 +135,7 @@
         fivedown: fivedown {
             compatible = "zmk,behavior-mod-morph";
             label = "FIVEDOWN";
-            bindings = <&kp KP_NUMBER_5>, <&kp DOWN>;
+            bindings = <&kp NUMBER_5>, <&kp DOWN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
@@ -145,7 +145,7 @@
         fourleft: fourleft {
             compatible = "zmk,behavior-mod-morph";
             label = "FOURLEFT";
-            bindings = <&kp KP_NUMBER_4>, <&kp LEFT>;
+            bindings = <&kp NUMBER_4>, <&kp LEFT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
@@ -155,7 +155,7 @@
         sixright: sixright {
             compatible = "zmk,behavior-mod-morph";
             label = "SIXRIGHT";
-            bindings = <&kp KP_NUMBER_6>, <&kp RIGHT>;
+            bindings = <&kp NUMBER_6>, <&kp RIGHT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
@@ -175,16 +175,18 @@
         };
     };
 };
+
 / {
-  behaviors {
-    nav_word: nav_word {
-      compatible = "zmk,behavior-auto-layer";
-      #binding-cells = <1>;
-      continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
-      ignore-modifiers;
+    behaviors {
+        nav_word: nav_word {
+            compatible = "zmk,behavior-auto-layer";
+            #binding-cells = <1>;
+            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
+            ignore-modifiers;
+        };
     };
-  };
 };
+
 / {
     behaviors {
         num_word: num_word {
