@@ -19,22 +19,22 @@
 
         L1COMBO {
             bindings = <&to 1>;
-            key-positions = <37 40>;
+            key-positions = <37 37>;
             layers = <0>;
-            timeout-ms = <50>;
+            timeout-ms = <180>;
         };
 
         L2COMBO {
             bindings = <&to 2>;
-            key-positions = <40 37>;
-            timeout-ms = <50>;
+            key-positions = <40 40>;
+            timeout-ms = <180>;
             layers = <0>;
         };
 
         keyrepeat {
             bindings = <&key_repeat>;
             key-positions = <38 39>;
-            timeout-ms = <50>;
+            timeout-ms = <180>;
             layers = <0>;
         };
     };
