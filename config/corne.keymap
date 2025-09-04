@@ -18,14 +18,19 @@
         compatible = "zmk,combos";
 
         L1COMBO {
-            bindings = <&tog 1>;
+            bindings = <&to 1>;
             key-positions = <37 40>;
             layers = <0>;
         };
 
         L2COMBO {
-            bindings = <&tog 2>;
+            bindings = <&to 2>;
             key-positions = <40 37>;
+        };
+
+        keyrepeat {
+            bindings = <&key_repeat>;
+            key-positions = <38 39>;
         };
     };
 
@@ -41,9 +46,9 @@
 
             bindings = <
 &gresc                     &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I        &odash       &pequal          &kp ESC
-&kp TAB                    &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
+&tabdel                    &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
 &mt LS(LA(LC(LGUI))) CAPS  &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
-                                                      &kp LGUI     &lt 1 DEL     &kp SPACE    &kp SPACE  &lt 2 DEL     &kp RALT
+                                                      &kp LGUI     &mo 1         &kp SPACE    &kp SPACE  &mo 2         &kp RALT
             >;
         };
 
@@ -58,7 +63,7 @@
 &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4             &trans         &kp N7        &eightup      &kp KP_NUMBER_9  &kp N0     &kp DELETE
 &kp LA(BACKSPACE)  &trans        &kp PLUS      &kp KP_MINUS  &kp ASTRK             &kp SLASH                &trans         &fourleft     &fivedown     &sixright        &kp DOT    &kp BACKSPACE
 &swapper           &trans        &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp COMMA  &kp RET
-                                               &kp LCMD      &trans                &kp SPACE                &kp RIGHT_ALT  &key_repeat   &trans
+                                               &kp LCMD      &trans                &kp SPACE                &kp RIGHT_ALT  &trans        &trans
             >;
         };
 
@@ -199,6 +204,15 @@
             #binding-cells = <1>;
             continue-list = <BACKSPACE DELETE DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
             ignore-numbers;
+        };
+
+        tabdel: tabdel {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TABDEL";
+            bindings = <&kp TAB>, <&kp BACKSPACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
     };
 };
