@@ -62,7 +62,7 @@
             bindings = <
 &bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4             &trans         &kp N7        &eightup      &kp KP_NUMBER_9  &kp N0     &kp DELETE
 &kp LA(BACKSPACE)  &trans        &kp PLUS      &kp KP_MINUS  &mt LALT ASTRK        &kp SLASH                &trans         &fourleft     &fivedown     &sixright        &kp DOT    &kp BACKSPACE
-&swapper           &trans        &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp COMMA  &kp RET
+&num_word 3        &trans        &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp COMMA  &kp RET
                                                &kp LCMD      &trans                &kp SPACE                &kp RIGHT_ALT  &to 0         &trans
             >;
         };
