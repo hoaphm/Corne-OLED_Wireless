@@ -117,7 +117,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         pequal: pequal {
@@ -126,7 +125,7 @@
             bindings = <&kp P>, <&kp EQUAL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         eightup: eightup {
