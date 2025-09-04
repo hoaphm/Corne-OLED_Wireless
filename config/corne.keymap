@@ -17,10 +17,15 @@
     combos {
         compatible = "zmk,combos";
 
-        caps {
-            bindings = <&kp CAPS>;
-            key-positions = <15 20>;
+        L1COMBO {
+            bindings = <&tog 1>;
+            key-positions = <37 40>;
             layers = <0>;
+        };
+
+        L2COMBO {
+            bindings = <&tog 2>;
+            key-positions = <40 37>;
         };
     };
 
@@ -38,7 +43,7 @@
 &gresc                     &kp Q         &kp W        &kp E        &kp R         &kp T        &kp Y      &kp U         &kp I        &odash       &pequal          &kp ESC
 &kp TAB                    &hml LCTRL A  &hml LALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H      &hmr RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
 &mt LS(LA(LC(LGUI))) CAPS  &kp Z         &kp X        &kp C        &kp V         &kp B        &kp N      &kp M         &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
-                                                      &kp LALT     &lt 1 DEL     &kp SPACE    &kp SPACE  &lt 2 DEL     &kp RALT
+                                                      &kp LGUI     &lt 1 DEL     &kp SPACE    &kp SPACE  &lt 2 DEL     &kp RALT
             >;
         };
 
