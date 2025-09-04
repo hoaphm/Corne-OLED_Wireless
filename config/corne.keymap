@@ -89,6 +89,15 @@
                               &trans    &trans     &kp EQUAL    &kp EQUAL  &trans  &trans
             >;
         };
+
+        layer_4 {
+            bindings = <
+&trans      &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)    &kp LA(N6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &trans  &trans
+&altTabMod  &kp LA(A)   &kp LA(S)   &kp LA(D)   &kp LA(F)   &kp LA(E)     &kp LA(H)   &kp LA(J)   &kp LA(K)   &kp LA(L)   &trans  &trans
+&trans      &trans      &trans      &kp LA(Y)   &kp LA(P)   &trans        &trans      &trans      &trans      &trans      &trans  &trans
+                                    &trans      &trans      &trans        &trans      &trans      &trans
+            >;
+        };
     };
 };
 
@@ -244,6 +253,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <350>;
             flavor = "tap-preferred";
+        };
+
+        altTabMod: altTabMod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTTABMOD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(TAB)>, <&kp LA(LS(TAB))>;
         };
     };
 };
