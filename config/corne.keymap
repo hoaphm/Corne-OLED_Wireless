@@ -126,8 +126,7 @@
             bindings = <&kp P>, <&kp EQUAL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_LCTL|MOD_RCTL)>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
         };
 
         eightup: eightup {
@@ -137,7 +136,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
-            keep-mods = <(MOD_LGUI|MOD_RALT)>;
         };
 
         fivedown: fivedown {
@@ -147,7 +145,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
-            keep-mods = <(MOD_LGUI|MOD_RALT)>;
         };
 
         fourleft: fourleft {
@@ -157,7 +154,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
-            keep-mods = <(MOD_LGUI|MOD_RALT)>;
         };
 
         sixright: sixright {
@@ -167,7 +163,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LGUI|MOD_RALT)>;
-            keep-mods = <(MOD_LGUI|MOD_RALT)>;
         };
     };
 };
