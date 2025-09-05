@@ -47,7 +47,7 @@
 &gresc                     &kp Q               &kp W               &kp E               &kp R               &kp T        &kp Y      &kp U              &kp I        &odash       &pequal          &kp ESC
 &kp TAB                    &hml LCTRL A        &hml LALT S         &hml LGUI D         &hmShiftL LSHFT F   &kp G        &kp H      &hmShiftR RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
 &mt LS(LA(LC(LGUI))) CAPS  &longPress LG(Z) Z  &longPress LG(X) X  &longPress LG(C) C  &longPress LG(V) V  &kp B        &kp N      &kp M              &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
-                                                                   &nav_word 4         &lt 1 BACKSPACE     &kp SPACE    &kp SPACE  &mo 2              &kp RALT
+                                                                   &autoLayerCb        &lt 1 BACKSPACE     &kp SPACE    &kp SPACE  &mo 2              &kp RALT
             >;
         };
 
@@ -61,7 +61,7 @@
             bindings = <
 &bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_SEL 3           &bt BT_SEL 4    &trans         &kp N7        &eightup      &kp KP_NUMBER_9  &kp DOT       &kp DELETE
 &kp BACKSPACE  &kp KP_PLUS   &kp MINUS     &kp ASTRK             &hml LALT SLASH        &trans          &trans         &fourleft     &fivedown     &sixright        &kp PERIOD    &kp BACKSPACE
-&num_word 3    &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans          &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_0  &kp RET
+&trans         &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans          &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_0  &kp RET
                                            &kp LCMD              &trans                 &kp SPACE       &kp RIGHT_ALT  &to 0         &trans
             >;
         };
@@ -317,6 +317,7 @@
 
             tapping-term-ms = <280>;
         };
+
         autoLayerCb: autoLayerCb {
             compatible = "zmk,behavior-tap-dance";
             label = "Auto-Layers Switch";
