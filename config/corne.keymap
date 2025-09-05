@@ -317,5 +317,13 @@
 
             tapping-term-ms = <280>;
         };
+        autoLayerCb: autoLayerCb {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Auto-Layers Switch";
+            #binding-cells = <0>;
+            bindings = <&nav_word 4>, <&num_word 3>;
+
+            tapping-term-ms = <280>;
+        };
     };
 };
