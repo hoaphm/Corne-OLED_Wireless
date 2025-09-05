@@ -92,10 +92,10 @@
 
         layer_4 {
             bindings = <
-&trans      &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &altRMod   &altTMod     &kp LA(N6)  &kp LA(N7)  &altIMod   &altOMod   &trans  &trans
-&altTabMod  &kp LA(A)   &kp LA(S)   &kp LA(D)   &altFMod   &kp LA(E)    &kp LA(H)   &kp LA(J)   &kp LA(K)  &kp LA(L)  &trans  &trans
-&trans      &trans      &kp LA(Y)   &altCMod    &kp LA(P)  &trans       &trans      &trans      &trans     &trans     &trans  &trans
-                                    &trans      &trans     &trans       &trans      &trans      &trans
+&trans      &altQMod   &altWMod   &kp LA(N3)  &altRMod   &altTMod     &kp LA(N6)  &kp LA(N7)  &altIMod   &altOMod   &trans  &trans
+&altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)   &altFMod   &kp LA(E)    &kp LA(H)   &kp LA(J)   &kp LA(K)  &kp LA(L)  &trans  &trans
+&trans      &trans     &kp LA(Y)  &altCMod    &kp LA(P)  &trans       &trans      &trans      &trans     &trans     &trans  &trans
+                                  &trans      &trans     &trans       &trans      &trans      &trans
             >;
         };
     };
@@ -323,6 +323,24 @@
             label = "Auto-Layers Switch";
             #binding-cells = <0>;
             bindings = <&nav_word 4>, <&num_word 3>;
+
+            tapping-term-ms = <280>;
+        };
+
+        altWMod: altWMod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTWMOD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(NUMBER_2)>, <&kp LA(W)>;
+
+            tapping-term-ms = <280>;
+        };
+
+        altQMod: altQMod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTQMOD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(NUMBER_1)>, <&kp LA(Q)>;
 
             tapping-term-ms = <280>;
         };
