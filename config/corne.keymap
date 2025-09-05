@@ -260,6 +260,8 @@
             label = "ALTTABMOD";
             #binding-cells = <0>;
             bindings = <&kp LA(TAB)>, <&kp LA(LS(TAB))>;
+
+            tapping-term-ms = <280>;
         };
 
         altFMod: altFMod {
@@ -267,6 +269,8 @@
             label = "ALTFMOD";
             #binding-cells = <0>;
             bindings = <&kp LA(F)>, <&kp LA(LS(F))>;
+
+            tapping-term-ms = <280>;
         };
 
         altCMod: altCMod {
@@ -274,6 +278,8 @@
             label = "ALTCMOD";
             #binding-cells = <0>;
             bindings = <&kp LA(C)>, <&kp LA(LS(C))>;
+
+            tapping-term-ms = <280>;
         };
 
         altRMod: altRMod {
@@ -281,6 +287,8 @@
             label = "ALTRMOD";
             #binding-cells = <0>;
             bindings = <&kp LA(N4)>, <&kp LA(LS(R))>;
+
+            tapping-term-ms = <280>;
         };
 
         altTMod: altTMod {
@@ -288,6 +296,8 @@
             label = "ALTTMOD";
             #binding-cells = <0>;
             bindings = <&kp LA(N5)>, <&kp LA(T)>;
+
+            tapping-term-ms = <280>;
         };
 
         altIMod: altIMod {
@@ -295,6 +305,8 @@
             label = "ALTIMOD";
             #binding-cells = <0>;
             bindings = <&kp LA(N8)>, <&kp LA(I)>;
+
+            tapping-term-ms = <280>;
         };
 
         altOMod: altOMod {
@@ -302,6 +314,8 @@
             label = "ALTOMOD";
             #binding-cells = <0>;
             bindings = <&kp LA(N9)>, <&kp LA(O)>;
+
+            tapping-term-ms = <280>;
         };
     };
 };
