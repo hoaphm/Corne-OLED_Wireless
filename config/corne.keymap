@@ -92,9 +92,9 @@
 
         layer_4 {
             bindings = <
-&trans      &altQMod   &altWMod   &kp LA(N3)  &altRMod   &altTMod     &kp LA(N6)  &kp LA(N7)  &altIMod   &altOMod   &trans  &trans
-&altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)   &altFMod   &kp LA(E)    &kp LA(H)   &kp LA(J)   &kp LA(K)  &kp LA(L)  &trans  &trans
-&trans      &trans     &kp LA(Y)  &altCMod    &kp LA(P)  &trans       &trans      &trans      &trans     &trans     &trans  &trans
+&trans      &altQMod   &altWMod   &kp LA(N3)  &altRMod   &altTMod     &kp LA(N6)  &kp LA(N7)  &altIMod  &altOMod  &trans  &trans
+&altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)   &altFMod   &kp LA(E)    &altHMod    &altJMod    &altKMod  &altLMod  &trans  &trans
+&trans      &trans     &kp LA(Y)  &altCMod    &kp LA(P)  &trans       &trans      &trans      &trans    &trans    &trans  &trans
                                   &trans      &trans     &trans       &trans      &trans      &trans
             >;
         };
@@ -341,6 +341,42 @@
             label = "ALTQMOD";
             #binding-cells = <0>;
             bindings = <&kp LA(NUMBER_1)>, <&kp LA(Q)>;
+
+            tapping-term-ms = <280>;
+        };
+
+        altHMod: altHMod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTHMOD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(H)>, <&kp LA(LS(H))>;
+
+            tapping-term-ms = <280>;
+        };
+
+        altJMod: altJMod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTJMOD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(J)>, <&kp LA(LS(J))>;
+
+            tapping-term-ms = <280>;
+        };
+
+        altKMod: altKMod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTKMOD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(K)>, <&kp LA(LS(K))>;
+
+            tapping-term-ms = <280>;
+        };
+
+        altLMod: altLMod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTLMOD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(L)>, <&kp LA(LS(L))>;
 
             tapping-term-ms = <280>;
         };
