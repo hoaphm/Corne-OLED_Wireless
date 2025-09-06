@@ -9,16 +9,16 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
     - name: zmk-tri-state
       remote: dhruvinsh
       revision: main
     - name: zmk-auto-layer
       remote: urob
-      revision: v0.3
+      revision: main
     - name: zmk-adaptive-key
       remote: urob
-      revision: v0.3 #
+      revision: main
   self:
     path: config
