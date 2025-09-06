@@ -35,15 +35,17 @@
         exclam {
             bindings = <&kp EXCL>;
             key-positions = <13 1>;
-            timeout-ms = <0>;
+            timeout-ms = <18>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
         at {
             bindings = <&kp AT_SIGN>;
             key-positions = <14 2>;
-            timeout-ms = <0>;
+            timeout-ms = <18>;
             layers = <0>;
+            require-prior-idle-ms = <150>;
         };
 
         hash {
