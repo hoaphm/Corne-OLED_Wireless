@@ -44,10 +44,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&gresc                     &kp Q               &kp W               &kp E               &kp R               &kp T        &kp Y      &kp U              &kp I        &odash       &pequal          &kp ESC
-&kp TAB                    &hml LCTRL A        &hml LALT S         &hml LGUI D         &hmShiftL LSHFT F   &kp G        &kp H      &hmShiftR RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
-&mt LS(LA(LC(LGUI))) CAPS  &longPress LG(Z) Z  &longPress LG(X) X  &longPress LG(C) C  &longPress LG(V) V  &kp B        &kp N      &kp M              &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
-                                                                   &autoLayerCb        &lt 1 BACKSPACE     &kp SPACE    &kp SPACE  &mo 2              &kp RALT
+&gresc                     &kp Q               &kp W               &kp E               &kp R               &kp T        &kp Y                      &kp U              &kp I        &odash       &pequal          &kp ESC
+&kp TAB                    &hml LCTRL A        &hml LALT S         &hml LGUI D         &hmShiftL LSHFT F   &kp G        &kp H                      &hmShiftR RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
+&mt LS(LA(LC(LGUI))) CAPS  &longPress LG(Z) Z  &longPress LG(X) X  &longPress LG(C) C  &longPress LG(V) V  &kp B        &kp N                      &kp M              &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
+                                                                   &autoLayerCb        &lt 1 BACKSPACE     &kp SPACE    &magic_thumb LEFT_SHIFT 0  &mo 2              &kp RALT
             >;
         };
 
@@ -74,19 +74,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL     &kp AT             &kp HASH         &kp DLLR       &kp PRCNT    &kp CARET  &kp AMPS           &kp ASTRK  &kp LPAR  &kp RPAR  &kp GRAVE
-&kp LCTRL  &key_repeat  &key_repeat        &key_repeat      &kp PAGE_UP    &kp INS      &kp MINUS  &kp SQT            &kp LBKT   &kp RBKT  &kp BSLH  &kp BACKSPACE
-&kp LSHFT  &kp K_MUTE   &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PAGE_DOWN  &kp HOME     &kp UNDER  &kp DOUBLE_QUOTES  &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                           &kp LGUI         &to 0          &kp SPACE    &kp RET    &trans             &kp RALT
+&kp TAB    &kp EXCL    &kp AT             &kp HASH         &kp DLLR       &kp PRCNT    &kp CARET  &kp AMPS           &kp ASTRK  &kp LPAR  &kp RPAR  &kp GRAVE
+&kp LCTRL  &trans      &trans             &trans           &kp PAGE_UP    &kp INS      &kp MINUS  &kp SQT            &kp LBKT   &kp RBKT  &kp BSLH  &kp BACKSPACE
+&kp LSHFT  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PAGE_DOWN  &kp HOME     &kp UNDER  &kp DOUBLE_QUOTES  &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                          &kp LGUI         &to 0          &kp SPACE    &kp RET    &trans             &kp RALT
             >;
         };
 
         layer_3 {
             bindings = <
-&kp ESC  &trans    &trans     &trans    &trans     &trans       &trans     &kp N7  &kp N8  &kp N9  &kp DOT    &kp ESC
-&trans   &kp PLUS  &kp MINUS  &kp STAR  &kp SLASH  &trans       &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp BSPC
-&trans   &trans    &trans     &trans    &trans     &trans       &trans     &kp N1  &kp N2  &kp N3  &kp N0     &trans
-                              &trans    &trans     &kp EQUAL    &kp EQUAL  &trans  &trans
+&kp ESC  &trans    &trans     &trans                &trans                 &trans       &trans     &kp N7  &kp N8  &kp N9  &kp DOT    &kp ESC
+&trans   &kp PLUS  &kp MINUS  &kp STAR              &kp SLASH              &trans       &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp BSPC
+&trans   &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &trans     &kp N1  &kp N2  &kp N3  &kp N0     &trans
+                              &trans                &trans                 &kp EQUAL    &kp EQUAL  &trans  &trans
             >;
         };
 
@@ -385,12 +385,26 @@
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
             bindings = <&sk LSHFT>;
+
             repeat {
                 trigger-keys = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z>;
                 bindings = <&key_repeat>;
                 max-prior-idle-ms = <1200>;
                 strict-modifiers;
             };
+        };
+
+        magic_thumb: magic_thumb {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MAGIC_THUMB";
+            bindings = <&kp>, <&shift_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-while-undecided;
+            hold-trigger-on-release;
+            quick-tap-ms = <175>;
         };
     };
 };
