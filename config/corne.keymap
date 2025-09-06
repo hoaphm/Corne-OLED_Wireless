@@ -380,23 +380,6 @@
 
             tapping-term-ms = <280>;
         };
-        magic_shift: magic_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            label = "Magic Shift";
-            bindings = <&kp>, <&magic_shift_tap>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-        };
-
-        magic_shift_tap: magic_shift_tap {
-            compatible = "zmk,behavior-mod-morph";
-            label = "Magic Shift Tap";
-            bindings = <&shift_repeat>, <&sk LS>;
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
 
         shift_repeat: shift_repeat {
             compatible = "zmk,behavior-adaptive-key";
