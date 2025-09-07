@@ -259,10 +259,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_SEL 3           &bt BT_SEL 4    &trans         &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
-&kp BACKSPACE  &kp PLUS      &kp MINUS     &kp ASTRK             &hml LALT SLASH        &trans          &trans         &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
-&trans         &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans          &kp EQUAL      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
-                                           &kp LCMD              &trans                 &kp SPACE       &kp RIGHT_ALT  &to 0         &trans
+&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_SEL 3           &bt BT_SEL 4    &trans     &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
+&kp BACKSPACE  &kp PLUS      &kp MINUS     &kp ASTRK             &hml LSHFT SLASH       &trans          &trans     &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
+&trans         &trans        &trans        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans          &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
+                                           &trans                &trans                 &kp SPACE       &kp RSHFT  &to 0         &trans
             >;
         };
 
@@ -274,10 +274,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC    &kp F1      &kp F2             &kp F3           &kp F4         &kp F5       &kp F6   &kp F7  &kp F8    &kp F9   &kp F10  &kp ESC
-&kp TAB    &kp LCTRL   &kp LALT           &kp LCMD         &kp PAGE_UP    &kp INS      &trans   &trans  &trans    &kp F11  &kp F12  &kp BACKSPACE
-&kp LSHFT  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PAGE_DOWN  &kp HOME     &trans   &trans  &trans    &trans   &trans   &trans
-                                          &kp LGUI         &to 0          &kp SPACE    &kp RET  &trans  &kp RALT
+&kp ESC    &trans      &trans             &kp F11          &kp F12        &trans       &kp F1     &kp F2  &kp F3    &kp F4  &kp F5   &kp ESC
+&kp TAB    &kp LCTRL   &kp LALT           &kp LCMD         &kp PAGE_UP    &kp INS      &kp F6     &kp F7  &kp F8    &kp F9  &kp F10  &kp BACKSPACE
+&kp LSHFT  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PAGE_DOWN  &kp HOME     &trans     &trans  &trans    &trans  &trans   &trans
+                                          &kp LGUI         &to 0          &kp SPACE    &kp RSHFT  &trans  &kp RALT
             >;
         };
 
@@ -353,7 +353,7 @@
             bindings = <&kp N8>, <&kp UP>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         fivedown: fivedown {
@@ -362,7 +362,7 @@
             bindings = <&kp NUMBER_5>, <&kp DOWN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         fourleft: fourleft {
@@ -371,7 +371,7 @@
             bindings = <&kp NUMBER_4>, <&kp LEFT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         sixright: sixright {
@@ -380,7 +380,7 @@
             bindings = <&kp NUMBER_6>, <&kp RIGHT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LGUI|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RCTL)>;
         };
     };
 };
