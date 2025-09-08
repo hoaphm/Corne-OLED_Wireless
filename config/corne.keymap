@@ -617,6 +617,8 @@
             label = "N1BT0";
             #binding-cells = <0>;
             bindings = <&kp LA(N1)>, <&bt BT_SEL 0>;
+
+            tapping-term-ms = <280>;
         };
 
         n2bt1: n2bt1 {
@@ -624,6 +626,8 @@
             label = "N2BT1";
             #binding-cells = <0>;
             bindings = <&kp LA(N2)>, <&bt BT_SEL 1>;
+
+            tapping-term-ms = <280>;
         };
 
         n3bt2: n3bt2 {
@@ -631,6 +635,8 @@
             label = "N3BT2";
             #binding-cells = <0>;
             bindings = <&kp LA(N3)>, <&bt BT_SEL 2>;
+
+            tapping-term-ms = <280>;
         };
 
         n4bt3: n4bt3 {
@@ -638,6 +644,8 @@
             label = "N4BT3";
             #binding-cells = <0>;
             bindings = <&kp LA(N4)>, <&bt BT_SEL 3>;
+
+            tapping-term-ms = <280>;
         };
 
         n5bt4: n5bt4 {
@@ -645,6 +653,8 @@
             label = "N5BT4";
             #binding-cells = <0>;
             bindings = <&kp LA(N5)>, <&bt BT_SEL 4>;
+
+            tapping-term-ms = <280>;
         };
     };
 };
