@@ -402,7 +402,7 @@
         nav_word: nav_word {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
-            continue-list = <LA(A) LA(S) LA(D) LA(F) LS(LA(F)) LA(C) LS(LA(C)) LA(E) LA(Y) LA(P) LA(TAB) LS(LA(TAB)) LA(N1) LA(Q) LA(N2) LA(W) LA(N3) LA(N4) LS(LA(R)) LA(N5) LA(T) LA(N6) LA(N7) LA(N8) LA(I) LA(N9) LA(O) LA(H) LS(LA(H)) LA(J) LS(LA(J)) LA(K) LS(LA(K)) LA(L) LS(LA(L))>;
+            continue-list = <LA(A) B LA(S) LA(D) LA(F) F LS(LA(F)) LA(C) LS(LA(C)) LA(V) LA(E) LA(Y) LA(P) LA(TAB) LS(LA(TAB)) LA(N1) LA(Q) LA(N2) LA(W) LA(N3) LA(N4) LS(LA(R)) LA(N5) LA(T) LA(N6) LA(N7) LA(N8) LA(I) LA(N9) LA(O) LA(H) LS(LA(H)) LA(J) LS(LA(J)) LA(K) LS(LA(K)) LA(L) LS(LA(L)) MINUS PLUS>;
             ignore-modifiers;
         };
     };
