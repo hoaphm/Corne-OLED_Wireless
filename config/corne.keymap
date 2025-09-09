@@ -292,10 +292,10 @@
 
         wm {
             bindings = <
-&trans      &altQMod   &altWMod   &kp LA(N3)  &altRMod   &altTMod     &kp LA(N6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp MINUS  &kp PLUS
-&altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)   &altFMod   &kp LA(E)    &altHMod    &altJMod    &altKMod    &altLMod    &trans     &trans
-&trans      &trans     &kp LA(Y)  &trans      &kp LA(V)  &kp B        &trans      &trans      &trans      &trans      &trans     &trans
-                                  &trans      &trans     &trans       &trans      &trans      &trans
+&trans      &altQMod   &altWMod   &altEMod   &altRMod   &altTMod    &kp LA(N6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp MINUS  &kp PLUS
+&altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)  &altFMod   &trans      &altHMod    &altJMod    &altKMod    &altLMod    &trans     &trans
+&trans      &trans     &kp LA(Y)  &trans     &kp LA(V)  &kp B       &trans      &trans      &trans      &trans      &trans     &trans
+                                  &trans     &trans     &trans      &trans      &trans      &trans
             >;
         };
     };
@@ -466,7 +466,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ALTFMOD";
             #binding-cells = <0>;
-            bindings = <&kp LA(F)>, <&kp F>;
+            bindings = <&kp LA(F)>, <&trans>;
 
             tapping-term-ms = <280>;
         };
@@ -653,6 +653,15 @@
             label = "N5BT4";
             #binding-cells = <0>;
             bindings = <&kp LA(N5)>, <&bt BT_SEL 4>;
+
+            tapping-term-ms = <280>;
+        };
+
+        altEMod: altEMod {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTEMOD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(NUMBER_2)>, <&kp LA(E)>;
 
             tapping-term-ms = <280>;
         };
