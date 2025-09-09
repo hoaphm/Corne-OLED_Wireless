@@ -261,7 +261,7 @@
             bindings = <
 &bt BT_CLR     &n1bt0    &n2bt1     &n3bt2                &n4bt3                 &n5bt4       &trans     &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
 &kp BACKSPACE  &kp PLUS  &kp MINUS  &kp ASTRK             &hml LSHFT SLASH       &trans       &trans     &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
-&trans         &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
+&swapper       &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
                                     &trans                &trans                 &kp SPACE    &kp RSHFT  &to 0         &trans
             >;
         };
@@ -292,7 +292,7 @@
 
         wm {
             bindings = <
-&trans      &altQMod   &altWMod   &altEMod   &altRMod   &altTMod    &kp LA(N6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp MINUS  &kp EQUAL
+&trans      &cmdWMod   &altWMod   &altEMod   &altRMod   &altTMod    &kp LA(N6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp MINUS  &kp EQUAL
 &altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)  &altFMod   &trans      &altHMod    &altJMod    &altKMod    &altLMod    &trans     &trans
 &trans      &trans     &kp LA(Y)  &trans     &kp LA(V)  &kp B       &trans      &trans      &trans      &trans      &trans     &trans
                                   &trans     &trans     &trans      &trans      &trans      &trans
@@ -534,11 +534,11 @@
             tapping-term-ms = <280>;
         };
 
-        altQMod: altQMod {
+        cmdWMod: cmdWMod {
             compatible = "zmk,behavior-tap-dance";
-            label = "ALTQMOD";
+            label = "CMDWMOD";
             #binding-cells = <0>;
-            bindings = <&kp LA(NUMBER_1)>, <&kp LA(Q)>;
+            bindings = <&kp LA(NUMBER_1)>, <&kp LG(W)>, <&kp LG(Q)>;
 
             tapping-term-ms = <280>;
         };
