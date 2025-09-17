@@ -259,7 +259,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_CLR     &n1bt0    &none      &none                 &none                  &none        &trans     &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
+&bt BT_CLR     &n1bt0    &n2bt1     &n3bt2                &n4bt3                 &n5bt4       &trans     &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
 &kp BACKSPACE  &kp PLUS  &kp MINUS  &kp ASTRK             &hml LSHFT SLASH       &trans       &trans     &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
 &swapper       &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
                                     &trans                &trans                 &kp SPACE    &kp RSHFT  &to 0         &trans
