@@ -247,7 +247,7 @@
 &gresc                     &kp Q               &kp W               &kp E               &kp R               &kp T        &kp Y                 &kp U              &kp I        &odash       &pequal          &kp ESC
 &kp TAB                    &hml LCTRL A        &hml LALT S         &hml LGUI D         &hmShiftL LSHFT F   &kp G        &kp H                 &hmShiftR RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
 &mt LS(LA(LC(LGUI))) CAPS  &longPress LG(Z) Z  &longPress LG(X) X  &longPress LG(C) C  &longPress LG(V) V  &kp B        &kp N                 &kp M              &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
-                                                                   &autoLayerCb        &lt 1 BACKSPACE     &kp SPACE    &magic_thumb LSHFT 0  &lt 2 DEL          &kp RALT
+                                                                   &autoLayerCb        &lt 1 BACKSPACE     &kp SPACE    &magic_thumb LSHFT 0  &lt 2 DEL          &kp F18
             >;
         };
 
