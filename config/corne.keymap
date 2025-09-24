@@ -294,7 +294,7 @@
             bindings = <
 &trans      &altQMod   &altWMod   &altEMod   &altRMod   &altTMod    &kp LA(N6)  &kp LA(N7)  &altIMod  &altOMod  &trans  &trans
 &altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)  &altFMod   &trans      &altHMod    &altJMod    &altKMod  &altLMod  &trans  &trans
-&trans      &trans     &kp LA(Y)  &trans     &kp LA(P)  &trans      &trans      &trans      &trans    &trans    &trans  &trans
+&trans      &trans     &kp LA(Y)  &altCMod   &kp LA(P)  &trans      &trans      &trans      &trans    &trans    &trans  &trans
                                   &trans     &trans     &trans      &trans      &trans      &trans
             >;
         };
