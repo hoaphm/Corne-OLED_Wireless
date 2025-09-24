@@ -625,7 +625,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ALTEMOD";
             #binding-cells = <0>;
-            bindings = <&kp LA(NUMBER_2)>, <&kp LA(E)>;
+            bindings = <&kp LA(NUMBER_3)>, <&kp LA(E)>;
 
             tapping-term-ms = <280>;
         };
