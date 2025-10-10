@@ -237,7 +237,7 @@
         dotspace: dotspace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DOT &kp SPACE>;
+            bindings = <&kp DOT &kp SPACE &caps_word>;
             label = "DOTSPACE";
         };
     };
