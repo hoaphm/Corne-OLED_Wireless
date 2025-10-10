@@ -625,7 +625,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "N1BT0";
             #binding-cells = <0>;
-            bindings = <&kp LA(N1)>, <&kp LA(LS(NUMBER_1))>, <&bt BT_SEL 0>;
+            bindings = <&kp LA(N1)>, <&bt BT_SEL 0>;
 
             tapping-term-ms = <280>;
         };
@@ -643,10 +643,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "N2BT1";
             #binding-cells = <0>;
-            bindings =
-                <&kp LA(NUMBER_2)>,
-                <&kp LA(LS(NUMBER_2))>,
-                <&bt BT_SEL 1>;
+            bindings = <&kp LA(NUMBER_2)>, <&bt BT_SEL 1>;
 
             tapping-term-ms = <280>;
         };
@@ -655,10 +652,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "N3BT2";
             #binding-cells = <0>;
-            bindings =
-                <&kp LA(NUMBER_3)>,
-                <&kp LA(LS(NUMBER_3))>,
-                <&bt BT_SEL 2>;
+            bindings = <&kp LA(NUMBER_3)>, <&bt BT_SEL 2>;
 
             tapping-term-ms = <280>;
         };
@@ -667,10 +661,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "N4BT3";
             #binding-cells = <0>;
-            bindings =
-                <&kp LA(NUMBER_4)>,
-                <&kp LA(LS(NUMBER_4))>,
-                <&bt BT_SEL 3>;
+            bindings = <&kp LA(NUMBER_4)>, <&bt BT_SEL 3>;
 
             tapping-term-ms = <280>;
         };
@@ -679,7 +670,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "N5BT4";
             #binding-cells = <0>;
-            bindings = <&kp LA(N5)>, <&kp LA(LS(N5))>, <&bt BT_SEL 4>;
+            bindings = <&kp LA(N5)>, <&bt BT_SEL 4>;
 
             tapping-term-ms = <280>;
         };
