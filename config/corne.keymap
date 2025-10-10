@@ -690,7 +690,7 @@
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&dotspace>;
 
-            tapping-term-ms = <280>;
+            tapping-term-ms = <220>;
         };
     };
 };
