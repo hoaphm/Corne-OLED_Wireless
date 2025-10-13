@@ -678,6 +678,7 @@
         sticky_shift: sticky_shift {
             compatible = "zmk,behavior-sticky-key";
             label = "Sticky Shift";
+#binding-cells = <0>;
             bindings = <&kp>;
             quick-release;
             release-after-ms = <1000>;
