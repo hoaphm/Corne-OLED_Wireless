@@ -234,13 +234,16 @@
     };
 
     macros {
-        dotspace: dotspace {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp DOT &kp SPACE &sk LSHFT>;
-            label = "DOTSPACE";
-        };
+    period_space_shift: period_space_shift {
+        compatible = "zmk,behavior-macro";
+        label = "period space + sticky shift";
+        bindings = <
+            &kp DOT
+            &kp SPACE
+            &sticky_shift
+        >;
     };
+};
 
     keymap {
         compatible = "zmk,keymap";
@@ -674,14 +677,20 @@
 
             tapping-term-ms = <280>;
         };
-
-        doubleSpc: doubleSpc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DOUBLESPC";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&dotspace>, <&sk LSHIFT>;
-
-            tapping-term-ms = <220>;
+        sticky_shift: sticky_shift {
+            compatible = "zmk,behavior-sticky-key";
+            label = "Sticky Shift";
+            bindings = <&kp LSHFT>;
+            quick-release;
+            release-after-ms = <1000>;
         };
+         td_space: td_space {
+        compatible = "zmk,behavior-tap-dance";
+        tapping-term-ms = <200>;
+        bindings = <
+            &kp SPACE            // Single tap: chỉ Space
+            &period_space_shift  // Double tap: gọi macro đã định nghĩa trên
+        >;
+    };
     };
 };
