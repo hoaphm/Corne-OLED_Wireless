@@ -685,7 +685,7 @@
 
         td_space: td_space {
             compatible = "zmk,behavior-tap-dance";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <220>;
             bindings = <
             &kp SPACE            // Single tap: chỉ Space
             &period_space_shift  // Double tap: gọi macro đã định nghĩa trên
