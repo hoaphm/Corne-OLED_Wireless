@@ -679,7 +679,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOUBLESPC";
             #binding-cells = <0>;
-            bindings = <&kp SPACE>, <&dotspace>;
+            bindings = <&kp SPACE>, <&dotspace>, <&sk LSHIFT>;
 
             tapping-term-ms = <220>;
         };
