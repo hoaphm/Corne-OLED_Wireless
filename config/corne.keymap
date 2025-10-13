@@ -239,7 +239,7 @@
             label = "period space + sticky shift";
             bindings =
                 <&kp DOT &kp SPACE>,
-                <&macro_pause_for_release>,
+                <&macro_wait_time 180>,
                 <&sticky_shift LSHFT>;
 
             #binding-cells = <0>;
