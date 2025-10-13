@@ -675,15 +675,6 @@
             tapping-term-ms = <280>;
         };
 
-        sticky_shift: sticky_shift {
-            compatible = "zmk,behavior-sticky-key";
-            label = "Sticky Shift";
-#binding-cells = <0>;
-            bindings = <&kp>;
-            quick-release;
-            release-after-ms = <1000>;
-        };
-
         td_space: td_space {
             compatible = "zmk,behavior-tap-dance";
             tapping-term-ms = <220>;
@@ -691,6 +682,15 @@
             &kp SPACE            // Single tap: chỉ Space
             &period_space_shift  // Double tap: gọi macro đã định nghĩa trên
             >;
+        };
+
+        sticky_shift: sticky_shift {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_SHIFT";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+            quick-release;
         };
     };
 };
