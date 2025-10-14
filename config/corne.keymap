@@ -237,11 +237,7 @@
         period_space_shift: period_space_shift {
             compatible = "zmk,behavior-macro";
             label = "period space + sticky shift";
-            bindings =
-                <&kp DOT &kp SPACE>,
-                <&macro_wait_time 180>,
-                <&sticky_shift LSHFT>;
-
+            bindings = <&kp DOT &kp SPACE>;
             #binding-cells = <0>;
         };
     };
