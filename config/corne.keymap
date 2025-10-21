@@ -268,10 +268,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_CLR     &n1bt0    &n2bt1     &n3bt2                &n4bt3                 &n5bt4       &trans     &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
-&kp BACKSPACE  &kp PLUS  &kp MINUS  &kp ASTRK             &hml LALT SLASH        &trans       &trans     &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
-&swapper       &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
-                                    &trans                &trans                 &kp SPACE    &kp RSHFT  &to 0         &trans
+&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2                 &trans                 &trans       &trans     &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
+&kp BACKSPACE  &kp PLUS      &hml LALT MINUS  &hml LS(LA(LC(LGUI))) ASTRK  &hml LS(LALT) SLASH    &trans       &trans     &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
+&trans         &trans        &trans           &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS  &trans       &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
+                                              &trans                       &trans                 &kp SPACE    &kp RSHFT  &to 0         &trans
             >;
         };
 
@@ -283,10 +283,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC    &trans      &trans             &kp F11          &kp F12        &trans       &kp F1     &kp F2  &kp F3    &kp F4  &kp F5   &kp ESC
-&kp TAB    &kp LCTRL   &kp LALT           &kp LCMD         &kp PAGE_UP    &kp INS      &kp F6     &kp F7  &kp F8    &kp F9  &kp F10  &kp BACKSPACE
-&kp LSHFT  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PAGE_DOWN  &kp HOME     &trans     &trans  &trans    &trans  &trans   &trans
-                                          &kp LGUI         &to 0          &kp SPACE    &kp RSHFT  &trans  &kp RALT
+&kp ESC  &trans      &trans             &kp F11          &kp F12        &trans       &kp F1     &kp F2  &kp F3    &kp F4  &kp F5   &kp ESC
+&kp TAB  &kp LCTRL   &kp LALT           &kp LCMD         &kp PAGE_UP    &kp INS      &kp F6     &kp F7  &kp F8    &kp F9  &kp F10  &kp BACKSPACE
+&trans   &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp PAGE_DOWN  &kp HOME     &trans     &trans  &trans    &trans  &trans   &trans
+                                        &kp LGUI         &to 0          &kp SPACE    &kp RSHFT  &trans  &kp RALT
             >;
         };
 
@@ -294,17 +294,17 @@
             bindings = <
 &kp ESC  &trans    &trans     &trans                &trans                 &trans       &trans     &kp N7  &kp N8  &kp N9  &kp DOT    &kp ESC
 &trans   &kp PLUS  &kp MINUS  &kp STAR              &kp SLASH              &trans       &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp BSPC
-&trans   &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &trans     &kp N1  &kp N2  &kp N3  &kp N0     &trans
-                              &trans                &trans                 &kp EQUAL    &kp EQUAL  &trans  &trans
+&trans   &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N0     &trans
+                              &trans                &trans                 &kp EQUAL    &trans     &trans  &trans
             >;
         };
 
         wm {
             bindings = <
-&trans      &altQMod   &altWMod   &altEMod   &altRMod   &altTMod    &kp LA(N6)  &kp LA(N7)  &altIMod  &altOMod  &trans  &trans
-&altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)  &altFMod   &trans      &altHMod    &altJMod    &altKMod  &altLMod  &trans  &trans
-&trans      &trans     &kp LA(Y)  &altCMod   &kp LA(P)  &trans      &trans      &trans      &trans    &trans    &trans  &trans
-                                  &trans     &trans     &trans      &trans      &trans      &trans
+&trans      &altQMod   &altWMod   &altEMod   &altRMod  &altTMod    &trans    &trans    &kp LA(I)  &kp LA(O)  &trans  &trans
+&altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)  &altFMod  &trans      &altHMod  &altJMod  &altKMod   &altLMod   &trans  &trans
+&trans      &trans     &trans     &altCMod   &trans    &trans      &trans    &trans    &trans     &trans     &trans  &trans
+                                  &trans     &trans    &trans      &trans    &trans    &trans
             >;
         };
     };
