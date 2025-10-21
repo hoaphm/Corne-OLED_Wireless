@@ -256,7 +256,7 @@
 &gresc                     &kp Q               &kp W               &kp E               &kp R               &kp T        &kp Y                 &kp U              &kp I        &odash       &pequal          &kp ESC
 &kp TAB                    &hml LCTRL A        &hml LALT S         &hml LGUI D         &hmShiftL LSHFT F   &kp G        &kp H                 &hmShiftR RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
 &mt LS(LA(LC(LGUI))) CAPS  &longPress LG(Z) Z  &longPress LG(X) X  &longPress LG(C) C  &longPress LG(V) V  &kp B        &kp N                 &kp M              &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
-                                                                   &num_word 3       &lt 1 BACKSPACE     &td_space    &magic_thumb LSHFT 0  &lt 2 DEL          &kp F18
+                                                                   &num_word 3         &lt 1 BACKSPACE     &td_space    &magic_thumb LSHFT 0  &lt 2 DEL          &kp F18
             >;
         };
 
@@ -268,10 +268,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2                 &trans                 &trans       &trans     &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
-&kp BACKSPACE  &kp PLUS      &hml LALT MINUS  &hml LS(LA(LC(LGUI))) ASTRK  &hml LS(LALT) SLASH    &trans       &trans     &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
-&trans         &trans        &trans           &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS  &trans       &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
-                                              &trans                       &trans                 &kp SPACE    &kp RSHFT  &to 0         &trans
+&bt BT_CLR     &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2                 &bt BT_SEL 3           &bt BT_SEL 4    &trans     &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
+&kp BACKSPACE  &kp PLUS      &hml LALT MINUS  &hml LS(LA(LC(LGUI))) ASTRK  &hml LS(LALT) SLASH    &trans          &trans     &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
+&trans         &trans        &trans           &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS  &trans          &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
+                                              &trans                       &trans                 &kp SPACE       &kp RSHFT  &to 0         &trans
             >;
         };
 
