@@ -292,10 +292,10 @@
 
         num {
             bindings = <
-&kp ESC  &trans    &trans     &trans                &trans                 &trans       &trans     &kp N7  &kp N8  &kp N9  &kp DOT    &kp ESC
-&trans   &kp PLUS  &kp MINUS  &kp STAR              &kp SLASH              &trans       &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp BSPC
-&trans   &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans       &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N0     &trans
-                              &trans                &trans                 &kp EQUAL    &trans     &trans  &trans
+&kp ESC  &trans    &trans     &trans                &trans                 &trans         &trans     &kp N7  &kp N8  &kp N9  &kp DOT    &kp ESC
+&trans   &kp PLUS  &kp MINUS  &kp STAR              &kp SLASH              &kp CARET      &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp BSPC
+&trans   &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT    &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N0     &trans
+                              &trans                &trans                 &kp EQUAL      &trans     &trans  &trans
             >;
         };
 
