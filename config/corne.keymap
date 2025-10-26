@@ -269,9 +269,9 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2                 &bt BT_SEL 3           &bt BT_SEL 4    &trans     &kp N7        &eightup      &kp N9        &kp DOT       &kp DELETE
-&trans      &kp PLUS      &hml LALT MINUS  &hml LS(LA(LC(LGUI))) ASTRK  &hml LS(LALT) SLASH    &trans          &trans     &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
-&trans      &trans        &trans           &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS  &trans          &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
-                                           &trans                       &trans                 &kp SPACE       &kp RSHFT  &to 0         &trans
+&trans      &kp PLUS      &hml LALT MINUS  &hml LS(LA(LC(LGUI))) ASTRK  &hml LS(LALT) SLASH    &kp CARET       &trans     &fourleft     &fivedown     &sixright     &kp COMMA     &kp BACKSPACE
+&trans      &trans        &trans           &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS  &kp PERCENT     &kp EQUAL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0  &kp RET
+                                           &trans                       &trans                 &kp SPACE       &kp RSHFT  &trans        &trans
             >;
         };
 
