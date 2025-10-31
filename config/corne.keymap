@@ -18,20 +18,6 @@
     combos {
         compatible = "zmk,combos";
 
-        L1COMBO {
-            bindings = <&to 1>;
-            key-positions = <37 38>;
-            layers = <0>;
-            timeout-ms = <180>;
-        };
-
-        L2COMBO {
-            bindings = <&to 2>;
-            key-positions = <40 39>;
-            timeout-ms = <180>;
-            layers = <0>;
-        };
-
         exclam {
             bindings = <&kp EXCL>;
             key-positions = <13 1>;
