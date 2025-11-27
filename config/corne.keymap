@@ -217,14 +217,6 @@
             layers = <0>;
             require-prior-idle-ms = <50>;
         };
-
-        jkl_Return {
-            bindings = <&kp ENTER>;
-            key-positions = <19 20 21>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
-            layers = <0>;
-        };
     };
 
     macros {
@@ -410,16 +402,18 @@
         };
     };
 };
+
 / {
     behaviors {
-      num_word: num_word {
-        #binding-cells = <1>;
-        compatible = "zmk,behavior-auto-layer";
-        continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
-        ignore-numbers;
+        num_word: num_word {
+            #binding-cells = <1>;
+            compatible = "zmk,behavior-auto-layer";
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            ignore-numbers;
+        };
     };
-  };
 };
+
 / {
     behaviors {
         tabdel: tabdel {
