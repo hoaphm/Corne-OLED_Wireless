@@ -217,6 +217,14 @@
             layers = <0>;
             require-prior-idle-ms = <50>;
         };
+
+        jkl_Return {
+            bindings = <&kp ENTER>;
+            key-positions = <19 20 21>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+            layers = <0>;
+        };
     };
 
     macros {
