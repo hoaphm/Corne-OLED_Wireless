@@ -408,8 +408,9 @@
         num_word: num_word {
             #binding-cells = <1>;
             compatible = "zmk,behavior-auto-layer";
-            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
+            continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL LEFT_PARENTHESIS RIGHT_PARENTHESIS CARET PERCENT>;
             ignore-numbers;
+ignore-modifiers;
         };
     };
 };
