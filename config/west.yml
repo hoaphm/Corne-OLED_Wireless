@@ -13,7 +13,7 @@ manifest:
       import: app/west.yml
     - name: zmk-tri-state
       remote: dhruvinsh
-      revision: v0.3.0
+      revision: main
     - name: zmk-auto-layer
       remote: urob
       revision: v0.3.0
