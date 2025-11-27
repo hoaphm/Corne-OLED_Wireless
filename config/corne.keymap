@@ -217,6 +217,16 @@
             layers = <0>;
             require-prior-idle-ms = <50>;
         };
+
+        nm_Return {
+            bindings = <&kp ENTER>;
+            key-positions = <30 31>;
+        };
+
+        vb_Return {
+            bindings = <&kp ENTER>;
+            key-positions = <28 29>;
+        };
     };
 
     macros {
@@ -410,7 +420,7 @@
             compatible = "zmk,behavior-auto-layer";
             continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL LEFT_PARENTHESIS RIGHT_PARENTHESIS CARET PERCENT>;
             ignore-numbers;
-ignore-modifiers;
+            ignore-modifiers;
         };
     };
 };
