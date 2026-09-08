@@ -248,10 +248,10 @@
             //                    | TAB | UTIL| SPC |   | ENT |  WM  | F18 |
 
             bindings = <
-&gresc                     &kp Q               &kp W               &kp E               &kp R               &kp T        &kp Y                 &kp U              &kp I        &kp O        &kp P            &kp ESC
-&kp TAB                    &hml LCTRL A        &hml LALT S         &hml LGUI D         &hmShiftL LSHFT F   &kp G        &kp H                 &hmShiftR RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
-&mt LS(LA(LC(LGUI))) CAPS  &longPress LC(Z) Z  &longPress LG(X) X  &longPress LG(C) C  &longPress LG(V) V  &kp B        &kp N                 &kp M              &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
-                                                                   &kp TAB             &lt 1 BACKSPACE     &td_space    &magic_thumb LSHFT 0  &lt 2 DEL          &kp F18
+&gresc                     &kp Q               &kp W               &kp E               &kp R               &kp T        &kp Y                 &kp U              &kp I           &kp O        &kp P            &kp ESC
+&kp TAB                    &hml LCTRL A        &hml LALT S         &hml LGUI D         &hmShiftL LSHFT F   &kp G        &kp H                 &hmShiftR RSHFT J  &hmr RCMD K     &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
+&mt LS(LA(LC(LGUI))) CAPS  &longPress LC(Z) Z  &longPress LG(X) X  &longPress LG(C) C  &longPress LG(V) V  &kp B        &kp N                 &kp M              &kp COMMA       &kp DOT      &kp FSLH         &kp ENTER
+                                                                   &kp LG(LC(TAB))     &lt 1 BACKSPACE     &td_space    &magic_thumb LSHFT 0  &lt 2 DEL          &window_switch
             >;
         };
 
@@ -272,10 +272,10 @@
 
         wm {
             bindings = <
-&trans          &workspace1  &workspace2    &workspace3  &workspace4    &workspace5        &workspace6  &workspace7  &workspace8  &workspace9  &workspace0   &kp LG(O)
-&window_switch  &trans       &kp LG(S)      &trans       &kp LG(LS(F))  &kp LG(RET)        &trans       &focus_left  &focus_down  &focus_up    &focus_right  &trans
-&trans          &trans       &kp LG(LC(V))  &trans       &trans         &kp LG(LS(RET))    &trans       &trans       &trans       &trans       &trans        &trans
-                                            &trans       &kp LG(LA(F))  &kp LG(LC(RET))    &trans       &trans       &trans
+&trans          &workspace1  &workspace2    &workspace3        &workspace4        &workspace5        &workspace6  &workspace7  &workspace8  &workspace9  &workspace0   &kp LG(O)
+&window_switch  &trans       &kp LG(MINUS)  &kp LG(EQUAL)      &kp LG(LS(F))      &kp LG(RET)        &trans       &focus_left  &focus_down  &focus_up    &focus_right  &trans
+&trans          &trans       &kp LG(LC(V))  &kp LG(LS(EQUAL))  &kp LG(LS(MINUS))  &kp LG(LS(RET))    &trans       &trans       &trans       &trans       &trans        &trans
+                                            &trans             &kp LG(LA(F))      &kp LG(LC(RET))    &trans       &trans       &trans
             >;
         };
     };
