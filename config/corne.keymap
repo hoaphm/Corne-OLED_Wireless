@@ -263,19 +263,19 @@
             // thumbs: trans | trans | SPACE | RSHFT | trans | BSPC
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp N7  &kp N8  &kp N9  &kp N0  &kp DOT  &kp COMMA
-&td_plus_f1 &td_minus_f2 &td_star_f3 &td_slash_f4 &td_caret_f5 &td_percent_f6 &kp N4 &kp N5 &kp N6 &kp LEFT &kp DOWN &kp UP
-&td_lparen_f7 &td_rparen_f8 &td_lbracket_f9 &td_rbracket_f10 &td_equal_f11 &td_home_f12 &kp N1 &kp N2 &kp N3 &kp RIGHT &kp PAGE_UP &kp PAGE_DOWN
-                                                     &trans &trans &kp SPACE &kp RSHFT &trans &kp BSPC
+&bt BT_CLR     &bt BT_SEL 0   &bt BT_SEL 1     &bt BT_SEL 2      &bt BT_SEL 3   &bt BT_SEL 4      &kp N7    &kp N8  &kp N9   &kp N0     &kp DOT      &kp COMMA
+&td_plus_f1    &td_minus_f2   &td_star_f3      &td_slash_f4      &td_caret_f5   &td_percent_f6    &kp N4    &kp N5  &kp N6   &kp LEFT   &kp DOWN     &kp UP
+&td_lparen_f7  &td_rparen_f8  &td_lbracket_f9  &td_rbracket_f10  &td_equal_f11  &td_home_f12      &kp N1    &kp N2  &kp N3   &kp RIGHT  &kp PAGE_UP  &kp PAGE_DOWN
+                                               &trans            &trans         &kp SPACE         &kp BSPC  &trans  &kp DEL
             >;
         };
 
         wm {
             bindings = <
-&trans      &workspace1 &workspace2 &workspace3 &workspace4 &workspace5 &workspace6 &workspace7 &workspace8 &workspace9 &workspace0 &trans
-&window_switch &kp LG(W) &kp LG(T) &kp LG(F) &kp LG(RET) &kp LG(SPACE) &focus_left &focus_down &focus_up &focus_right &kp LG(O) &kp LG(S)
-&trans      &kp LG(C)  &kp LG(V)  &kp LG(X)  &trans    &trans      &trans    &trans    &trans     &trans     &trans     &trans
-                                  &trans     &trans    &trans      &trans    &trans     &trans
+&trans          &workspace1  &workspace2    &workspace3  &workspace4    &workspace5        &workspace6  &workspace7  &workspace8  &workspace9  &workspace0   &kp LG(O)
+&window_switch  &trans       &kp LG(S)      &trans       &kp LG(LS(F))  &kp LG(RET)        &trans       &focus_left  &focus_down  &focus_up    &focus_right  &trans
+&trans          &trans       &kp LG(LC(V))  &trans       &trans         &kp LG(LS(RET))    &trans       &trans       &trans       &trans       &trans        &trans
+                                            &trans       &kp LG(LA(F))  &kp LG(LC(RET))    &trans       &trans       &trans
             >;
         };
     };
@@ -308,10 +308,8 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-
     };
 };
-
 
 / {
     behaviors {
@@ -348,11 +346,13 @@
             tapping-term-ms = <350>;
             flavor = "tap-preferred";
         };
+
         td_plus_f1: td_plus_f1 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_PLUS_F1";
             #binding-cells = <0>;
             bindings = <&kp PLUS>, <&kp F1>;
+
             tapping-term-ms = <220>;
         };
 
@@ -361,6 +361,7 @@
             label = "TD_MINUS_F2";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp F2>;
+
             tapping-term-ms = <220>;
         };
 
@@ -369,6 +370,7 @@
             label = "TD_STAR_F3";
             #binding-cells = <0>;
             bindings = <&kp STAR>, <&kp F3>;
+
             tapping-term-ms = <220>;
         };
 
@@ -377,6 +379,7 @@
             label = "TD_SLASH_F4";
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp F4>;
+
             tapping-term-ms = <220>;
         };
 
@@ -385,6 +388,7 @@
             label = "TD_CARET_F5";
             #binding-cells = <0>;
             bindings = <&kp CARET>, <&kp F5>;
+
             tapping-term-ms = <220>;
         };
 
@@ -393,6 +397,7 @@
             label = "TD_PERCENT_F6";
             #binding-cells = <0>;
             bindings = <&kp PERCENT>, <&kp F6>;
+
             tapping-term-ms = <220>;
         };
 
@@ -401,6 +406,7 @@
             label = "TD_LPAREN_F7";
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp F7>;
+
             tapping-term-ms = <220>;
         };
 
@@ -409,6 +415,7 @@
             label = "TD_RPAREN_F8";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_PARENTHESIS>, <&kp F8>;
+
             tapping-term-ms = <220>;
         };
 
@@ -417,6 +424,7 @@
             label = "TD_LBRACKET_F9";
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET>, <&kp F9>;
+
             tapping-term-ms = <220>;
         };
 
@@ -425,6 +433,7 @@
             label = "TD_RBRACKET_F10";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_BRACKET>, <&kp F10>;
+
             tapping-term-ms = <220>;
         };
 
@@ -433,6 +442,7 @@
             label = "TD_EQUAL_F11";
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&kp F11>;
+
             tapping-term-ms = <220>;
         };
 
@@ -441,6 +451,7 @@
             label = "TD_HOME_F12";
             #binding-cells = <0>;
             bindings = <&kp HOME>, <&kp F12>;
+
             tapping-term-ms = <220>;
         };
 
@@ -449,6 +460,7 @@
             label = "WORKSPACE_1";
             #binding-cells = <0>;
             bindings = <&kp LG(N1)>, <&kp LG(LS(N1))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -457,6 +469,7 @@
             label = "WORKSPACE_2";
             #binding-cells = <0>;
             bindings = <&kp LG(N2)>, <&kp LG(LS(N2))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -465,6 +478,7 @@
             label = "WORKSPACE_3";
             #binding-cells = <0>;
             bindings = <&kp LG(N3)>, <&kp LG(LS(N3))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -473,6 +487,7 @@
             label = "WORKSPACE_4";
             #binding-cells = <0>;
             bindings = <&kp LG(N4)>, <&kp LG(LS(N4))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -481,6 +496,7 @@
             label = "WORKSPACE_5";
             #binding-cells = <0>;
             bindings = <&kp LG(N5)>, <&kp LG(LS(N5))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -489,6 +505,7 @@
             label = "WORKSPACE_6";
             #binding-cells = <0>;
             bindings = <&kp LG(N6)>, <&kp LG(LS(N6))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -497,6 +514,7 @@
             label = "WORKSPACE_7";
             #binding-cells = <0>;
             bindings = <&kp LG(N7)>, <&kp LG(LS(N7))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -505,6 +523,7 @@
             label = "WORKSPACE_8";
             #binding-cells = <0>;
             bindings = <&kp LG(N8)>, <&kp LG(LS(N8))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -513,6 +532,7 @@
             label = "WORKSPACE_9";
             #binding-cells = <0>;
             bindings = <&kp LG(N9)>, <&kp LG(LS(N9))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -521,6 +541,7 @@
             label = "WORKSPACE_0";
             #binding-cells = <0>;
             bindings = <&kp LG(N0)>, <&kp LG(LS(N0))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -529,6 +550,7 @@
             label = "WINDOW_SWITCH";
             #binding-cells = <0>;
             bindings = <&kp LA(TAB)>, <&kp LA(LS(TAB))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -537,6 +559,7 @@
             label = "FOCUS_LEFT";
             #binding-cells = <0>;
             bindings = <&kp LG(H)>, <&kp LG(LS(H))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -545,6 +568,7 @@
             label = "FOCUS_DOWN";
             #binding-cells = <0>;
             bindings = <&kp LG(J)>, <&kp LG(LS(J))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -553,6 +577,7 @@
             label = "FOCUS_UP";
             #binding-cells = <0>;
             bindings = <&kp LG(K)>, <&kp LG(LS(K))>;
+
             tapping-term-ms = <280>;
         };
 
@@ -561,9 +586,9 @@
             label = "FOCUS_RIGHT";
             #binding-cells = <0>;
             bindings = <&kp LG(L)>, <&kp LG(LS(L))>;
+
             tapping-term-ms = <280>;
         };
-
 
         shift_repeat: shift_repeat {
             compatible = "zmk,behavior-adaptive-key";
