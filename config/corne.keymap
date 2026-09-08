@@ -257,16 +257,16 @@
 
         utility_layer {
             // Tap symbol/navigation; double-tap left-side symbol key = F1-F12.
-            // | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   |  7  |  8  |  9  |  0  |  .  | BSPC |
+            // | BTCLR| BT0 | BT1 | BT2 | BT3 | BT4 |   |  7  |  8  |  9  |  0  |  .  |  ,   |
             // |  +   |  -  |  *  |  /  |  ^  |  %  |   |  4  |  5  |  6  | LFT | DWN |  UP  |
             // |  (   |  )  |  [  |  ]  |  =  | HOME|   |  1  |  2  |  3  | RGT | PGU | PGD  |
-            // thumbs: trans | trans | SPACE | RSHFT | trans | COMMA
+            // thumbs: trans | trans | SPACE | RSHFT | trans | BSPC
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp N7  &kp N8  &kp N9  &kp N0  &kp DOT  &kp BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp N7  &kp N8  &kp N9  &kp N0  &kp DOT  &kp COMMA
 &td_plus_f1 &td_minus_f2 &td_star_f3 &td_slash_f4 &td_caret_f5 &td_percent_f6 &kp N4 &kp N5 &kp N6 &kp LEFT &kp DOWN &kp UP
 &td_lparen_f7 &td_rparen_f8 &td_lbracket_f9 &td_rbracket_f10 &td_equal_f11 &td_home_f12 &kp N1 &kp N2 &kp N3 &kp RIGHT &kp PAGE_UP &kp PAGE_DOWN
-                                                     &trans &trans &kp SPACE &kp RSHFT &trans &kp COMMA
+                                                     &trans &trans &kp SPACE &kp RSHFT &trans &kp BSPC
             >;
         };
 
