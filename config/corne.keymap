@@ -360,7 +360,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MINUS_F2";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp F2>;
+            bindings = <&hml RCTRL MINUS>, <&kp F2>;
 
             tapping-term-ms = <220>;
         };
@@ -369,7 +369,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_STAR_F3";
             #binding-cells = <0>;
-            bindings = <&kp STAR>, <&kp F3>;
+            bindings = <&hml RALT STAR>, <&kp F3>;
 
             tapping-term-ms = <220>;
         };
@@ -378,7 +378,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SLASH_F4";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp F4>;
+            bindings = <&hml RGUI SLASH>, <&kp F4>;
 
             tapping-term-ms = <220>;
         };
@@ -387,7 +387,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_CARET_F5";
             #binding-cells = <0>;
-            bindings = <&kp CARET>, <&kp F5>;
+            bindings = <&hmShiftL RSHIFT CARET>, <&kp F5>;
 
             tapping-term-ms = <220>;
         };
