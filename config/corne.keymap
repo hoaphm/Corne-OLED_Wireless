@@ -252,7 +252,7 @@
 &gresc                     &kp Q               &kp W               &kp E               &kp R               &kp T        &kp Y                 &kp U              &kp I        &kp O        &kp P            &kp ESC
 &kp TAB                    &hml LCTRL A        &hml LALT S         &hml LGUI D         &hmShiftL LSHFT F   &kp G        &kp H                 &hmShiftR RSHFT J  &hmr RCMD K  &hmr RALT L  &hmr RCTRL SEMI  &kp BACKSPACE
 &mt LS(LA(LC(LGUI))) CAPS  &longPress LG(Z) Z  &longPress LG(X) X  &longPress LG(C) C  &longPress LG(V) V  &kp B        &kp N                 &kp M              &kp COMMA    &kp DOT      &kp FSLH         &kp ENTER
-                                                                   &num_word 3         &lt 1 BACKSPACE     &td_space    &magic_thumb LSHFT 0  &lt 2 DEL          &kp F18
+ &num_word 1 &lt 1 BACKSPACE &td_space &magic_thumb LSHFT 0 &lt 2 DEL &kp F18
             >;
         };
 
@@ -286,23 +286,6 @@
             >;
         };
 
-        num {
-            bindings = <
-&kp ESC  &trans    &trans     &trans                &trans                 &trans         &trans     &kp N7  &kp N8  &kp N9  &kp DOT    &kp ESC
-&trans   &kp PLUS  &kp MINUS  &kp STAR              &kp SLASH              &kp CARET      &trans     &kp N4  &kp N5  &kp N6  &kp COMMA  &kp BSPC
-&trans   &trans    &trans     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT    &kp EQUAL  &kp N1  &kp N2  &kp N3  &kp N0     &trans
-                              &trans                &trans                 &kp EQUAL      &trans     &trans  &trans
-            >;
-        };
-
-        wm {
-            bindings = <
-&trans      &altQMod   &altWMod   &altEMod   &altRMod  &altTMod    &trans    &trans    &kp LA(I)  &kp LA(O)  &trans  &trans
-&altTabMod  &kp LA(A)  &kp LA(S)  &kp LA(D)  &altFMod  &trans      &altHMod  &altJMod  &altKMod   &altLMod   &trans  &trans
-&trans      &trans     &trans     &altCMod   &trans    &trans      &trans    &trans    &trans     &trans     &trans  &trans
-                                  &trans     &trans    &trans      &trans    &trans    &trans
-            >;
-        };
     };
 };
 
@@ -402,16 +385,6 @@
     };
 };
 
-/ {
-    behaviors {
-        nav_word: nav_word {
-            compatible = "zmk,behavior-auto-layer";
-            #binding-cells = <1>;
-            continue-list = <LA(A) B LA(S) LA(D) LA(F) F LS(LA(F)) LA(C) LS(LA(C)) LA(V) LA(E) LA(Y) LA(P) LA(TAB) LS(LA(TAB)) LA(N1) LA(Q) LA(N2) LA(W) LA(N3) LA(N4) LA(R) LS(LA(R)) LA(N5) LA(T) LA(N6) LA(N7) LA(N8) LA(I) LA(N9) LA(O) LA(H) LS(LA(H)) LA(J) LS(LA(J)) LA(K) LS(LA(K)) LA(L) LS(LA(L)) MINUS EQUAL LGUI(W) LGUI(Q) LA(COMMA) LA(SLASH) ESC>;
-            ignore-modifiers;
-        };
-    };
-};
 
 / {
     behaviors {
@@ -533,14 +506,6 @@
             tapping-term-ms = <280>;
         };
 
-        autoLayerCb: autoLayerCb {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Auto-Layers Switch";
-            #binding-cells = <0>;
-            bindings = <&nav_word 4>, <&num_word 3>;
-
-            tapping-term-ms = <280>;
-        };
 
         altWMod: altWMod {
             compatible = "zmk,behavior-tap-dance";
